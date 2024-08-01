@@ -387,6 +387,22 @@ class Character extends FlxSprite
 				barColor = 0xFF9a00f8;
 
 				playAnim('idle');
+
+			case 'charmy':
+				tex = Paths.getSparrowAtlas('Charmy', 'shared', true);
+				frames = tex;
+
+				animation.addByPrefix('idle', "idle", 24, false);
+				animation.addByPrefix('singUP', "up, 24, false);
+				animation.addByPrefix('singDOWN', "down", 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singRIGHT', 'tight', 24, false);
+				animation.addByIndices('idleLoop', "idle", [11, 12], "", 12, true);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xff;
+
+				playAnim('idle');
 			default:
 				parseDataFile();
 		}
